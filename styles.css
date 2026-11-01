@@ -1,20 +1,24 @@
 :root {
-  --bg-top: #fff7f1;
-  --bg-bottom: #f2e3d7;
+  --bg-top: #f7f2ee;
+  --bg-bottom: #efdfd1;
+  --shell: rgba(255, 255, 255, 0.82);
   --card: rgba(255, 255, 255, 0.86);
   --card-strong: #ffffff;
   --primary: #ff7a1a;
+  --primary-strong: #ff5a00;
   --primary-soft: #fff1e7;
-  --text: #17191d;
-  --muted: #5f6673;
-  --border: rgba(23, 25, 29, 0.08);
-  --shadow: 0 25px 50px rgba(63, 38, 22, 0.14);
-  --green: #1bb67a;
-  --red: #ff5a6d;
-  --yellow: #f3b819;
+  --text: #171a1f;
+  --text-strong: #0f1115;
+  --muted: #646d78;
+  --border: rgba(23, 26, 31, 0.08);
+  --shadow: 0 28px 54px rgba(42, 28, 19, 0.14);
+  --shadow-soft: 0 18px 32px rgba(35, 28, 22, 0.08);
+  --green: #18b57b;
+  --red: #ff5d6f;
+  --yellow: #f4b725;
   --purple: #8b5cf6;
-  --blue: #2d9bf0;
-  --mint: #29c4b3;
+  --blue: #2c9bf0;
+  --mint: #2ac7b1;
 }
 
 * {
@@ -49,7 +53,7 @@ button, a {
   position: relative;
   width: min(100%, 390px);
   min-height: 844px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(246,240,236,0.92));
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(248,241,235,0.94));
   border: 1px solid rgba(255,255,255,0.7);
   border-radius: 40px;
   box-shadow: var(--shadow);
@@ -62,7 +66,7 @@ button, a {
   height: 26px;
   margin: 0 auto 10px;
   border-radius: 0 0 22px 22px;
-  background: rgba(12, 14, 19, 0.9);
+  background: rgba(15, 17, 21, 0.96);
 }
 
 .topbar,
@@ -92,13 +96,14 @@ button, a {
   font-size: 11px;
   color: var(--muted);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .topbar h1,
 .detail-header h1 {
   margin: 0;
   font-size: clamp(1.5rem, 5vw, 1.9rem);
+  letter-spacing: -0.04em;
 }
 
 .icon-button,
@@ -107,10 +112,10 @@ button, a {
   height: 40px;
   border: 1px solid rgba(255, 122, 26, 0.18);
   border-radius: 12px;
-  background: linear-gradient(135deg, rgba(255,122,26,0.16), rgba(255,122,26,0.04));
+  background: linear-gradient(135deg, rgba(255,122,26,0.12), rgba(255,122,26,0.04));
   display: grid;
   place-items: center;
-  box-shadow: 0 10px 20px rgba(255, 122, 26, 0.08);
+  box-shadow: 0 12px 22px rgba(255, 122, 26, 0.08);
   color: var(--text);
   text-decoration: none;
 }
@@ -121,16 +126,17 @@ button, a {
 }
 
 .hero-card {
-  background: linear-gradient(135deg, #121418 0%, #ff7a1a 100%);
+  background: linear-gradient(135deg, #101417 0%, #1d1d1f 26%, #ff7a1a 100%);
   border-radius: 28px;
   padding: 20px 18px;
   color: white;
-  box-shadow: 0 20px 40px rgba(255, 122, 26, 0.3);
+  box-shadow: 0 22px 42px rgba(255, 122, 26, 0.24);
 }
 
 .hero-card h2 {
   margin: 0;
   font-size: 1.5rem;
+  letter-spacing: -0.04em;
 }
 
 .hero-text {
@@ -142,9 +148,9 @@ button, a {
 .small-label {
   margin: 0;
   font-size: 12px;
-  color: rgba(255,255,255,0.7);
+  color: rgba(255,255,255,0.72);
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .date-pill {
@@ -155,6 +161,7 @@ button, a {
   font-size: 12px;
   background: rgba(255,255,255,0.14);
   border: 1px solid rgba(255,255,255,0.14);
+  font-weight: 600;
 }
 
 .quick-stats {
@@ -164,23 +171,25 @@ button, a {
 }
 
 .mini-stat {
-  background: rgba(255,255,255,0.7);
+  background: rgba(255,255,255,0.72);
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 14px 12px;
   display: grid;
   gap: 6px;
+  box-shadow: var(--shadow-soft);
 }
 
 .mini-label {
   color: var(--muted);
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mini-stat strong {
   font-size: 1.05rem;
+  letter-spacing: -0.03em;
 }
 
 .metric-grid {
@@ -199,14 +208,14 @@ button, a {
   text-decoration: none;
   color: var(--text);
   background: rgba(255,255,255,0.78);
-  border: 1px solid var(--border);
-  box-shadow: 0 15px 30px rgba(31, 26, 24, 0.06);
+  border: 1px solid rgba(255,255,255,0.7);
+  box-shadow: var(--shadow-soft);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .metric-card:hover {
   transform: translateY(-3px);
-  box-shadow: 0 18px 35px rgba(31, 26, 24, 0.1);
+  box-shadow: 0 18px 35px rgba(23, 26, 31, 0.12);
 }
 
 .card-icon {
@@ -223,27 +232,28 @@ button, a {
   margin: 0 0 6px;
   font-size: 0.82rem;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .metric-card strong {
   font-size: 1.25rem;
   display: block;
   margin-bottom: 6px;
+  letter-spacing: -0.04em;
 }
 
 .metric-card small {
   color: var(--green);
-  font-weight: 600;
+  font-weight: 700;
 }
 
-.metric-card.blood .card-icon { background: linear-gradient(135deg, rgba(255, 90, 109, 0.18), rgba(255, 90, 109, 0.04)); }
+.metric-card.blood .card-icon { background: linear-gradient(135deg, rgba(255, 93, 111, 0.18), rgba(255, 93, 111, 0.04)); }
 .metric-card.heart .card-icon { background: linear-gradient(135deg, rgba(255, 122, 26, 0.18), rgba(255, 122, 26, 0.04)); }
-.metric-card.temp .card-icon { background: linear-gradient(135deg, rgba(243,184,25,0.2), rgba(243,184,25,0.05)); }
-.metric-card.weight .card-icon { background: linear-gradient(135deg, rgba(41,196,179,0.18), rgba(41,196,179,0.04)); }
-.metric-card.walk .card-icon { background: linear-gradient(135deg, rgba(45,155,240,0.18), rgba(45,155,240,0.04)); }
+.metric-card.temp .card-icon { background: linear-gradient(135deg, rgba(244,183,37,0.2), rgba(244,183,37,0.05)); }
+.metric-card.weight .card-icon { background: linear-gradient(135deg, rgba(42,199,177,0.18), rgba(42,199,177,0.04)); }
+.metric-card.walk .card-icon { background: linear-gradient(135deg, rgba(44,155,240,0.18), rgba(44,155,240,0.04)); }
 .metric-card.sleep .card-icon { background: linear-gradient(135deg, rgba(139,92,246,0.18), rgba(139,92,246,0.04)); }
-.metric-card.run .card-icon { background: linear-gradient(135deg, rgba(27,182,122,0.18), rgba(27,182,122,0.04)); }
+.metric-card.run .card-icon { background: linear-gradient(135deg, rgba(24,181,123,0.18), rgba(24,181,123,0.04)); }
 
 .detail-page {
   padding-top: 10px;
@@ -255,6 +265,7 @@ button, a {
 
 .detail-header h1 {
   font-size: 1.6rem;
+  letter-spacing: -0.04em;
 }
 
 .status-tag {
@@ -265,7 +276,7 @@ button, a {
   border-radius: 999px;
   font-size: 11px;
   font-weight: 700;
-  background: rgba(27,182,122,0.12);
+  background: rgba(24,181,123,0.12);
   color: var(--green);
 }
 
@@ -283,7 +294,7 @@ button, a {
   background: rgba(255,255,255,0.72);
   border: 1px solid var(--border);
   border-radius: 26px;
-  box-shadow: 0 14px 28px rgba(31, 26, 24, 0.08);
+  box-shadow: 0 16px 32px rgba(24, 22, 20, 0.06);
 }
 
 .metric-highlight {
@@ -297,17 +308,19 @@ button, a {
   width: 144px;
   height: 144px;
   border-radius: 50%;
-  background: radial-gradient(circle at center, rgba(255,255,255,0.9) 0 54%, rgba(255,122,26,0.14) 55%, rgba(255,122,26,0.2) 100%);
-  border: 12px solid rgba(255,122,26,0.2);
+  background: radial-gradient(circle at center, rgba(255,255,255,0.95) 0 54%, rgba(255,122,26,0.12) 55%, rgba(255,122,26,0.18) 100%);
+  border: 12px solid rgba(255,122,26,0.18);
   display: grid;
   place-items: center;
   text-align: center;
+  box-shadow: inset 0 0 0 1px rgba(255,122,26,0.08);
 }
 
 .highlight-ring strong {
   display: block;
   font-size: 1.8rem;
   line-height: 1.1;
+  letter-spacing: -0.05em;
 }
 
 .highlight-ring small {
@@ -335,7 +348,7 @@ button, a {
   color: var(--muted);
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .mini-reading strong {
@@ -359,13 +372,13 @@ button, a {
   border-radius: 12px;
   text-decoration: none;
   color: var(--muted);
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .tab.active {
   background: var(--card-strong);
   color: var(--text);
-  box-shadow: 0 6px 14px rgba(255, 122, 26, 0.12);
+  box-shadow: 0 8px 18px rgba(255, 122, 26, 0.12);
 }
 
 .metric-summary,
@@ -378,6 +391,7 @@ button, a {
 .history-card h3 {
   margin: 0 0 14px;
   font-size: 1.1rem;
+  letter-spacing: -0.03em;
 }
 
 .summary-grid,
@@ -404,6 +418,7 @@ button, a {
 
 .kpi-box strong {
   font-size: 1.2rem;
+  letter-spacing: -0.04em;
 }
 
 .detail-card {
@@ -482,7 +497,7 @@ button, a {
   color: var(--muted);
   font-size: 11px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .history-item .trend {
@@ -496,8 +511,8 @@ button, a {
   font-weight: 700;
 }
 
-.trend.up { background: rgba(27,182,122,0.12); color: var(--green); }
-.trend.down { background: rgba(255,90,109,0.12); color: var(--red); }
+.trend.up { background: rgba(24,181,123,0.12); color: var(--green); }
+.trend.down { background: rgba(255,93,111,0.12); color: var(--red); }
 
 @media (max-width: 420px) {
   body {
