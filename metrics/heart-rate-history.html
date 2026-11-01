@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Rate | PulseCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../app.js"></script>
+  </head>
+  <body class="detail-page">
+    <div class="phone-shell">
+      <div class="notch"></div>
+
+      <header class="detail-header">
+        <a class="back-btn" href="../index.html" aria-label="Back">←</a>
+        <div>
+          <p class="eyebrow">Health check</p>
+          <h1>Heart Rate</h1>
+        </div>
+        <span class="status-tag">Stable</span>
+      </header>
+
+      <main class="detail-body">
+        <section class="metric-highlight">
+          <div class="highlight-ring">
+            <div>
+              <strong>74</strong>
+              <small>bpm</small>
+            </div>
+          </div>
+
+          <div class="mini-readings">
+            <div class="mini-reading">
+              <label>Resting</label>
+              <strong>68</strong>
+            </div>
+            <div class="mini-reading">
+              <label>Peak</label>
+              <strong>94</strong>
+            </div>
+            <div class="mini-reading">
+              <label>Trend</label>
+              <strong>+2%</strong>
+            </div>
+          </div>
+        </section>
+
+        <nav class="action-tabs" aria-label="Metric navigation">
+          <a class="tab active" href="heart-rate.html">Overview</a>
+          <a class="tab" href="heart-rate-history.html">History</a>
+        </nav>
+
+        <section class="metric-summary">
+          <h3>Overview</h3>
+          <div class="summary-grid">
+            <div class="kpi-box">
+              <span class="kpi-label">Last read</span>
+              <strong>7:45 AM</strong>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-label">Zone</span>
+              <strong>Recovery</strong>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-label">Avg</span>
+              <strong>72 bpm</strong>
+            </div>
+            <div class="kpi-box">
+              <span class="kpi-label">Goal</span>
+              <strong>&lt;80</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="detail-card">
+          <div class="detail-copy">
+            <p>
+              Your heart rate remains steady and aligned with a healthy recovery rhythm. Keeping your hydration and sleep routine consistent supports better cardiovascular performance.
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

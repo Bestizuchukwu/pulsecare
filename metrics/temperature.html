@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heart Rate History | PulseCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../app.js"></script>
+  </head>
+  <body class="detail-page">
+    <div class="phone-shell">
+      <div class="notch"></div>
+
+      <header class="detail-header">
+        <a class="back-btn" href="../index.html" aria-label="Back">←</a>
+        <div>
+          <p class="eyebrow">Health check</p>
+          <h1>Heart Rate</h1>
+        </div>
+        <span class="status-tag">Stable</span>
+      </header>
+
+      <main class="detail-body">
+        <section class="metric-highlight">
+          <div class="highlight-ring">
+            <div>
+              <strong>74</strong>
+              <small>7-day avg</small>
+            </div>
+          </div>
+
+          <div class="mini-readings">
+            <div class="mini-reading">
+              <label>Week</label>
+              <strong>6 days</strong>
+            </div>
+            <div class="mini-reading">
+              <label>Change</label>
+              <strong>+1%</strong>
+            </div>
+            <div class="mini-reading">
+              <label>Goal</label>
+              <strong>70-80</strong>
+            </div>
+          </div>
+        </section>
+
+        <nav class="action-tabs" aria-label="Metric navigation">
+          <a class="tab" href="heart-rate.html">Overview</a>
+          <a class="tab active" href="heart-rate-history.html">History</a>
+        </nav>
+
+        <section class="history-card">
+          <h3>Recent history</h3>
+          <ul class="history-list">
+            <li class="history-item">
+              <div class="meta">
+                <strong>74 bpm</strong>
+                <time>Today</time>
+              </div>
+              <span class="trend up">Stable</span>
+            </li>
+            <li class="history-item">
+              <div class="meta">
+                <strong>72 bpm</strong>
+                <time>Yesterday</time>
+              </div>
+              <span class="trend up">+2%</span>
+            </li>
+            <li class="history-item">
+              <div class="meta">
+                <strong>71 bpm</strong>
+                <time>2 days ago</time>
+              </div>
+              <span class="trend up">+1%</span>
+            </li>
+            <li class="history-item">
+              <div class="meta">
+                <strong>76 bpm</strong>
+                <time>3 days ago</time>
+              </div>
+              <span class="trend down">-3%</span>
+            </li>
+          </ul>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
