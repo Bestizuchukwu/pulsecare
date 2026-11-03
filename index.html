@@ -19,97 +19,28 @@
           <p class="eyebrow">Wellness overview</p>
           <h1>PulseCare</h1>
         </div>
-        <button class="icon-button" aria-label="Notifications">🔔</button>
+        <button class="icon-button" id="notifBtn" aria-label="Notifications" aria-expanded="false" data-count="0">🔔</button>
       </header>
 
       <main class="dashboard">
+        <section class="notif-panel" id="notifPanel" hidden></section>
         <section class="hero-card">
           <div class="hero-text">
             <p class="small-label">Today</p>
-            <h2>Good health trend</h2>
+            <h2 id="heroTitle">Good health trend</h2>
           </div>
           <span id="todayDate" class="date-pill">Loading...</span>
         </section>
 
         <section class="quick-stats">
-          <div class="mini-stat">
-            <span class="mini-label">Steps</span>
-            <strong>8,420</strong>
-          </div>
-          <div class="mini-stat">
-            <span class="mini-label">Hydration</span>
-            <strong>2.1L</strong>
-          </div>
-          <div class="mini-stat">
-            <span class="mini-label">Sleep</span>
-            <strong>7.8h</strong>
-          </div>
+          <div class="mini-stat"><span class="mini-label">Walk</span><strong id="statWalk">–</strong></div>
+          <div class="mini-stat"><span class="mini-label">Sleep</span><strong id="statSleep">–</strong></div>
+          <div class="mini-stat"><span class="mini-label">Run</span><strong id="statRun">–</strong></div>
         </section>
 
-        <section class="metric-grid">
-          <a class="metric-card blood" href="metrics/blood-pressure.html">
-            <div class="card-icon">🩺</div>
-            <div class="card-copy">
-              <p>Blood Pressure</p>
-              <strong>118/76</strong>
-              <small>Normal</small>
-            </div>
-          </a>
+        <input class="search-box" id="metricSearch" type="search" placeholder="Search metrics" aria-label="Search metrics" />
 
-          <a class="metric-card heart" href="metrics/heart-rate.html">
-            <div class="card-icon">💓</div>
-            <div class="card-copy">
-              <p>Heart Rate</p>
-              <strong>74 bpm</strong>
-              <small>Stable</small>
-            </div>
-          </a>
-
-          <a class="metric-card temp" href="metrics/temperature.html">
-            <div class="card-icon">🌡️</div>
-            <div class="card-copy">
-              <p>Temperature</p>
-              <strong>36.9°C</strong>
-              <small>Healthy</small>
-            </div>
-          </a>
-
-          <a class="metric-card weight" href="metrics/weight.html">
-            <div class="card-icon">⚖️</div>
-            <div class="card-copy">
-              <p>Weight</p>
-              <strong>69.4 kg</strong>
-              <small>Balanced</small>
-            </div>
-          </a>
-
-          <a class="metric-card walk" href="metrics/walk-time.html">
-            <div class="card-icon">🚶</div>
-            <div class="card-copy">
-              <p>Walk Time</p>
-              <strong>42 min</strong>
-              <small>Active</small>
-            </div>
-          </a>
-
-          <a class="metric-card sleep" href="metrics/sleeping-time.html">
-            <div class="card-icon">😴</div>
-            <div class="card-copy">
-              <p>Sleeping Time</p>
-              <strong>7.8 h</strong>
-              <small>Rested</small>
-            </div>
-          </a>
-
-          <a class="metric-card run" href="metrics/running-time.html">
-            <div class="card-icon">🏃</div>
-            <div class="card-copy">
-              <p>Running Time</p>
-              <strong>24 min</strong>
-              <small>Strong</small>
-            </div>
-          </a>
-        </section>
+        <section class="metric-grid" id="metricGrid"></section>
       </main>
     </div>
   </body>

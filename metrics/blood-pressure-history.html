@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PulseCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="../styles.css" />
+    <script defer src="../app.js"></script>
+  </head>
+  <body class="detail-page" data-metric="blood-pressure" data-view="history">
+    <div class="phone-shell">
+      <div class="notch"></div>
+
+      <header class="detail-header">
+        <a class="back-btn" href="../index.html" aria-label="Back">←</a>
+        <div>
+          <p class="eyebrow">Health check</p>
+          <h1 id="metricTitle"></h1>
+        </div>
+        <span class="status-tag" id="metricStatus"></span>
+      </header>
+
+      <main class="detail-body" id="metricRoot"></main>
+    </div>
+  </body>
+</html>

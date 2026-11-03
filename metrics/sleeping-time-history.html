@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sleeping Time | PulseCare</title>
+    <title>PulseCare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="../app.js"></script>
   </head>
-  <body class="detail-page">
+  <body class="detail-page" data-metric="sleeping-time" data-view="history">
     <div class="phone-shell">
       <div class="notch"></div>
 
@@ -18,71 +18,12 @@
         <a class="back-btn" href="../index.html" aria-label="Back">←</a>
         <div>
           <p class="eyebrow">Health check</p>
-          <h1>Sleeping Time</h1>
+          <h1 id="metricTitle"></h1>
         </div>
-        <span class="status-tag">Rested</span>
+        <span class="status-tag" id="metricStatus"></span>
       </header>
 
-      <main class="detail-body">
-        <section class="metric-highlight">
-          <div class="highlight-ring">
-            <div>
-              <strong>7.8</strong>
-              <small>hours</small>
-            </div>
-          </div>
-
-          <div class="mini-readings">
-            <div class="mini-reading">
-              <label>Deep</label>
-              <strong>1.9h</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Goal</label>
-              <strong>8h</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Trend</label>
-              <strong>+4%</strong>
-            </div>
-          </div>
-        </section>
-
-        <nav class="action-tabs" aria-label="Metric navigation">
-          <a class="tab active" href="sleeping-time.html">Overview</a>
-          <a class="tab" href="sleeping-time-history.html">History</a>
-        </nav>
-
-        <section class="metric-summary">
-          <h3>Overview</h3>
-          <div class="summary-grid">
-            <div class="kpi-box">
-              <span class="kpi-label">Asleep</span>
-              <strong>7.8h</strong>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-label">Quality</span>
-              <strong>Good</strong>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-label">Avg</span>
-              <strong>7.5h</strong>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-label">Goal</span>
-              <strong>8h</strong>
-            </div>
-          </div>
-        </section>
-
-        <section class="detail-card">
-          <div class="detail-copy">
-            <p>
-              Sleep duration is within the recommended healthy range and supports memory, recovery, and energy. Keeping consistent sleep and wake times helps maintain performance and steady mood.
-            </p>
-          </div>
-        </section>
-      </main>
+      <main class="detail-body" id="metricRoot"></main>
     </div>
   </body>
 </html>

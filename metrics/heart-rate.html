@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blood Pressure History | PulseCare</title>
+    <title>PulseCare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="../app.js"></script>
   </head>
-  <body class="detail-page">
+  <body class="detail-page" data-metric="heart-rate" data-view="overview">
     <div class="phone-shell">
       <div class="notch"></div>
 
@@ -18,75 +18,12 @@
         <a class="back-btn" href="../index.html" aria-label="Back">←</a>
         <div>
           <p class="eyebrow">Health check</p>
-          <h1>Blood Pressure</h1>
+          <h1 id="metricTitle"></h1>
         </div>
-        <span class="status-tag">Normal</span>
+        <span class="status-tag" id="metricStatus"></span>
       </header>
 
-      <main class="detail-body">
-        <section class="metric-highlight">
-          <div class="highlight-ring">
-            <div>
-              <strong>118/76</strong>
-              <small>7-day avg</small>
-            </div>
-          </div>
-
-          <div class="mini-readings">
-            <div class="mini-reading">
-              <label>Week</label>
-              <strong>6 days</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Change</label>
-              <strong>-2%</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Goal</label>
-              <strong>120/80</strong>
-            </div>
-          </div>
-        </section>
-
-        <nav class="action-tabs" aria-label="Metric navigation">
-          <a class="tab" href="blood-pressure.html">Overview</a>
-          <a class="tab active" href="blood-pressure-history.html">History</a>
-        </nav>
-
-        <section class="history-card">
-          <h3>Recent history</h3>
-          <ul class="history-list">
-            <li class="history-item">
-              <div class="meta">
-                <strong>118/76</strong>
-                <time>Today</time>
-              </div>
-              <span class="trend up">Stable</span>
-            </li>
-            <li class="history-item">
-              <div class="meta">
-                <strong>121/79</strong>
-                <time>Yesterday</time>
-              </div>
-              <span class="trend up">+1%</span>
-            </li>
-            <li class="history-item">
-              <div class="meta">
-                <strong>119/75</strong>
-                <time>2 days ago</time>
-              </div>
-              <span class="trend up">+2%</span>
-            </li>
-            <li class="history-item">
-              <div class="meta">
-                <strong>123/81</strong>
-                <time>3 days ago</time>
-              </div>
-              <span class="trend down">-1%</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <main class="detail-body" id="metricRoot"></main>
     </div>
   </body>
 </html>
