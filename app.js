@@ -1,9 +1,3 @@
-(function () {
-  const STORE_KEY = 'pulsecare.readings.v1';
-  const NOTIF_KEY = 'pulsecare.notifications.v1';
-  const OK_STATUS = /^(Normal|Stable|Healthy|Balanced|Rested|Strong|Active|Goal met|Building)$/;
-  const DAY = 86400000;
-
 const current = location.pathname.split('/').pop();
 if (current && current.includes('-history')) {
   const historyLinks = document.querySelectorAll('.tab');
