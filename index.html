@@ -1,116 +1,220 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>PulseCare | Health Dashboard</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="styles.css" />
-    <script defer src="app.js"></script>
-  </head>
-  <body>
-    <div class="phone-shell">
-      <div class="notch"></div>
 
-      <header class="topbar">
-        <div>
-          <p class="eyebrow">Wellness overview</p>
-          <h1>PulseCare</h1>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulseCare | Health Dashboard</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script defer src="app.js"></script>
+</head>
+
+<body>
+  <div class="phone-shell">
+    <div class="notch"></div>
+
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Wellness overview</p>
+        <h1>PulseCare</h1>
+      </div>
+      <a class="icon-button" href="schedule.html" aria-label="Schedule and reminders">🗓️</a>
+      <a class="icon-button" href="find-care.html" aria-label="Find a doctor and plan a check-up">🩺</a>
+      <button class="icon-button" aria-label="Notifications">🔔</button>
+    </header>
+
+    <main class="dashboard">
+      <section class="hero-card">
+        <div class="hero-text">
+          <p class="small-label">Today</p>
+          <h2>Good health trend</h2>
         </div>
-        <button class="icon-button" aria-label="Notifications">🔔</button>
-      </header>
-
-      <main class="dashboard">
-        <section class="hero-card">
-          <div class="hero-text">
-            <p class="small-label">Today</p>
-            <h2>Good health trend</h2>
-          </div>
+        <div class="hero-meta">
           <span id="todayDate" class="date-pill">Loading...</span>
-        </section>
+          <span class="hero-status">Sample data</span>
+        </div>
+      </section>
 
-        <section class="quick-stats">
-          <div class="mini-stat">
-            <span class="mini-label">Steps</span>
-            <strong>8,420</strong>
+      <section class="quick-tools">
+        <button class="tool-pill active">Overview</button>
+        <a class="tool-pill" href="find-care.html">Find care</a>
+        <button class="tool-pill">Voice note</button>
+        <button class="tool-pill">AI coach</button>
+      </section>
+
+      <section class="quick-stats">
+        <div class="mini-stat">
+          <span class="mini-label">Steps</span>
+          <strong>8,420</strong>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-label">Hydration</span>
+          <strong>2.1L</strong>
+        </div>
+        <div class="mini-stat">
+          <span class="mini-label">Sleep</span>
+          <strong>7.8h</strong>
+        </div>
+      </section>
+
+      <a class="food-plan-link" href="food-plan.html">
+        <span class="food-plan-icon" aria-hidden="true">🥗</span>
+        <span class="food-plan-copy">
+          <strong>Daily food plan</strong>
+          <small>Flexible meal ideas, timing, and benefits</small>
+        </span>
+        <span class="food-plan-arrow" aria-hidden="true">→</span>
+      </a>
+
+      <section class="wellness-banner">
+        <div class="banner-copy">
+          <span class="banner-tag">Pregnancy care demo</span>
+          <strong>Sample tracking</strong>
+        </div>
+        <span class="banner-value">Demo</span>
+      </section>
+
+      <section class="metric-grid">
+        <a class="metric-card blood" href="metrics/detail.html?metric=blood-pressure">
+          <div class="card-icon">🩺</div>
+          <div class="card-copy">
+            <p>Blood Pressure</p>
+            <strong>118/76</strong>
+            <small>Normal</small>
           </div>
-          <div class="mini-stat">
-            <span class="mini-label">Hydration</span>
+        </a>
+
+        <a class="metric-card heart" href="metrics/detail.html?metric=heart-rate">
+          <div class="card-icon">💓</div>
+          <div class="card-copy">
+            <p>Heart Rate</p>
+            <strong>74 bpm</strong>
+            <small>Stable</small>
+          </div>
+        </a>
+
+        <a class="metric-card temp" href="metrics/detail.html?metric=temperature">
+          <div class="card-icon">🌡️</div>
+          <div class="card-copy">
+            <p>Temperature</p>
+            <strong>36.9°C</strong>
+            <small>Healthy</small>
+          </div>
+        </a>
+
+        <a class="metric-card weight" href="metrics/detail.html?metric=weight">
+          <div class="card-icon">⚖️</div>
+          <div class="card-copy">
+            <p>Weight</p>
+            <strong>69.4 kg</strong>
+            <small>Balanced</small>
+          </div>
+        </a>
+
+        <a class="metric-card oxygen" href="metrics/detail.html?metric=oxygen">
+          <div class="card-icon">💨</div>
+          <div class="card-copy">
+            <p>Blood Oxygen</p>
+            <strong>98%</strong>
+            <small>Optimal</small>
+          </div>
+        </a>
+
+        <a class="metric-card fever" href="metrics/detail.html?metric=fever">
+          <div class="card-icon">🔥</div>
+          <div class="card-copy">
+            <p>Fever</p>
+            <strong>36.8°C</strong>
+            <small>No fever</small>
+          </div>
+        </a>
+
+        <a class="metric-card pregnancy" href="metrics/detail.html?metric=pregnancy">
+          <div class="card-icon">🤰</div>
+          <div class="card-copy">
+            <p>Pregnancy</p>
+            <strong>12 wk</strong>
+            <small>On track</small>
+          </div>
+        </a>
+
+        <a class="metric-card hydration" href="metrics/detail.html?metric=hydration">
+          <div class="card-icon">💧</div>
+          <div class="card-copy">
+            <p>Hydration</p>
             <strong>2.1L</strong>
+            <small>Goal met</small>
           </div>
-          <div class="mini-stat">
-            <span class="mini-label">Sleep</span>
-            <strong>7.8h</strong>
+        </a>
+
+        <a class="metric-card stress" href="metrics/detail.html?metric=stress">
+          <div class="card-icon">🧠</div>
+          <div class="card-copy">
+            <p>Stress</p>
+            <strong>22%</strong>
+            <small>Calm</small>
           </div>
-        </section>
+        </a>
 
-        <section class="metric-grid">
-          <a class="metric-card blood" href="metrics/blood-pressure.html">
-            <div class="card-icon">🩺</div>
-            <div class="card-copy">
-              <p>Blood Pressure</p>
-              <strong>118/76</strong>
-              <small>Normal</small>
-            </div>
-          </a>
+        <a class="metric-card coach" href="metrics/detail.html?metric=coach">
+          <div class="card-icon">🤖</div>
+          <div class="card-copy">
+            <p>AI Coach</p>
+            <strong>Daily plan</strong>
+            <small>Ready</small>
+          </div>
+        </a>
 
-          <a class="metric-card heart" href="metrics/heart-rate.html">
-            <div class="card-icon">💓</div>
-            <div class="card-copy">
-              <p>Heart Rate</p>
-              <strong>74 bpm</strong>
-              <small>Stable</small>
-            </div>
-          </a>
+        <a class="metric-card dictation" href="metrics/detail.html?metric=dictation">
+          <div class="card-icon">🎙️</div>
+          <div class="card-copy">
+            <p>Voice Dictation</p>
+            <strong>2 notes</strong>
+            <small>Saved</small>
+          </div>
+        </a>
 
-          <a class="metric-card temp" href="metrics/temperature.html">
-            <div class="card-icon">🌡️</div>
-            <div class="card-copy">
-              <p>Temperature</p>
-              <strong>36.9°C</strong>
-              <small>Healthy</small>
-            </div>
-          </a>
+        <a class="metric-card cycle" href="metrics/detail.html?metric=cycle">
+          <div class="card-icon">📅</div>
+          <div class="card-copy">
+            <p>Cycle</p>
+            <strong>28 days</strong>
+            <small>Regular</small>
+          </div>
+        </a>
 
-          <a class="metric-card weight" href="metrics/weight.html">
-            <div class="card-icon">⚖️</div>
-            <div class="card-copy">
-              <p>Weight</p>
-              <strong>69.4 kg</strong>
-              <small>Balanced</small>
-            </div>
-          </a>
+        <a class="metric-card walk" href="metrics/detail.html?metric=walk-time">
+          <div class="card-icon">🚶</div>
+          <div class="card-copy">
+            <p>Walk Time</p>
+            <strong>42 min</strong>
+            <small>Active</small>
+          </div>
+        </a>
 
-          <a class="metric-card walk" href="metrics/walk-time.html">
-            <div class="card-icon">🚶</div>
-            <div class="card-copy">
-              <p>Walk Time</p>
-              <strong>42 min</strong>
-              <small>Active</small>
-            </div>
-          </a>
+        <a class="metric-card sleep" href="metrics/detail.html?metric=sleeping-time">
+          <div class="card-icon">😴</div>
+          <div class="card-copy">
+            <p>Sleeping Time</p>
+            <strong>7.8 h</strong>
+            <small>Rested</small>
+          </div>
+        </a>
 
-          <a class="metric-card sleep" href="metrics/sleeping-time.html">
-            <div class="card-icon">😴</div>
-            <div class="card-copy">
-              <p>Sleeping Time</p>
-              <strong>7.8 h</strong>
-              <small>Rested</small>
-            </div>
-          </a>
+        <a class="metric-card run" href="metrics/detail.html?metric=running-time">
+          <div class="card-icon">🏃</div>
+          <div class="card-copy">
+            <p>Running Time</p>
+            <strong>24 min</strong>
+            <small>Strong</small>
+          </div>
+        </a>
+      </section>
+    </main>
+  </div>
+</body>
 
-          <a class="metric-card run" href="metrics/running-time.html">
-            <div class="card-icon">🏃</div>
-            <div class="card-copy">
-              <p>Running Time</p>
-              <strong>24 min</strong>
-              <small>Strong</small>
-            </div>
-          </a>
-        </section>
-      </main>
-    </div>
-  </body>
 </html>

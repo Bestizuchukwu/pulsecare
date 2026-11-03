@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Daily Food Plan | PulseCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body class="food-plan-page">
+    <div class="phone-shell schedule-shell">
+      <div class="notch"></div>
+      <header class="detail-header">
+        <a class="back-btn" href="index.html" aria-label="Back to dashboard">←</a>
+        <div>
+          <p class="eyebrow">Everyday nourishment</p>
+          <h1>Daily food plan</h1>
+        </div>
+        <a class="care-calendar-link" href="schedule.html" aria-label="Open schedule">🗓️</a>
+      </header>
+
+      <main class="food-plan-content">
+        <section class="food-plan-hero">
+          <span class="food-plan-hero-icon" aria-hidden="true">🌿</span>
+          <h2>A flexible day of balanced meals</h2>
+          <p>Use these meal-time examples as a starting point. There is no single best schedule for everyone—fit meals around your sleep, routine, culture, appetite, and health needs.</p>
+        </section>
+
+        <p class="schedule-notice" role="note">
+          General wellness information only, not a prescribed diet or a promise of weight or fitness results. For allergies, pregnancy, medical conditions, medication-related food restrictions, or specific nutrition goals, ask a qualified health professional or registered dietitian.
+        </p>
+
+        <section class="food-plan-section" aria-labelledby="mealsHeading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Example day</p>
+              <h2 id="mealsHeading">Meals &amp; suggested times</h2>
+            </div>
+          </div>
+          <div class="meal-list">
+            <article class="meal-card">
+              <div class="meal-time"><span aria-hidden="true">🌅</span><time>7:00–9:00 AM</time></div>
+              <div class="meal-copy">
+                <h3>Breakfast</h3>
+                <p>Try oats or whole-grain toast with eggs, yogurt, beans, or nut butter, plus fruit.</p>
+                <p class="meal-benefit"><strong>Why it helps:</strong> A mix of fiber and protein can make a satisfying start and contribute useful nutrients.</p>
+              </div>
+            </article>
+            <article class="meal-card optional-meal">
+              <div class="meal-time"><span aria-hidden="true">🍎</span><time>10:00–11:00 AM</time></div>
+              <div class="meal-copy">
+                <h3>Optional snack</h3>
+                <p>Choose fruit with yogurt, a small handful of nuts, or vegetables with hummus if you are hungry.</p>
+                <p class="meal-benefit"><strong>Why it helps:</strong> A convenient snack can bridge a long gap between meals; skip it if it does not suit your appetite.</p>
+              </div>
+            </article>
+            <article class="meal-card">
+              <div class="meal-time"><span aria-hidden="true">☀️</span><time>12:00–2:00 PM</time></div>
+              <div class="meal-copy">
+                <h3>Lunch</h3>
+                <p>Build a bowl or plate with vegetables, a whole grain or starchy staple, and protein such as lentils, fish, tofu, chicken, or beans.</p>
+                <p class="meal-benefit"><strong>Why it helps:</strong> Combining food groups offers variety and supports energy and nutrient intake through the day.</p>
+              </div>
+            </article>
+            <article class="meal-card optional-meal">
+              <div class="meal-time"><span aria-hidden="true">🥜</span><time>3:00–4:30 PM</time></div>
+              <div class="meal-copy">
+                <h3>Optional afternoon snack</h3>
+                <p>Consider whole-grain crackers with cheese, fruit with nut butter, or roasted chickpeas if you want something between meals.</p>
+                <p class="meal-benefit"><strong>Why it helps:</strong> A planned option may be practical on busy days; snacks are not required for everyone.</p>
+              </div>
+            </article>
+            <article class="meal-card">
+              <div class="meal-time"><span aria-hidden="true">🌙</span><time>6:00–8:00 PM</time></div>
+              <div class="meal-copy">
+                <h3>Dinner</h3>
+                <p>Try vegetables with a protein food and a satisfying staple—for example, beans and rice, tofu with noodles, or fish with potatoes.</p>
+                <p class="meal-benefit"><strong>Why it helps:</strong> A varied evening meal can round out the day; choose timing and portions that feel comfortable for you.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="food-plan-section balance-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">A simple guide</p>
+              <h2>Make it balanced, your way</h2>
+            </div>
+          </div>
+          <ul class="balance-list">
+            <li><span aria-hidden="true">🥦</span><span><strong>Add color</strong><small>Include vegetables or fruit when available; fresh, frozen, and canned options can all work.</small></span></li>
+            <li><span aria-hidden="true">🌾</span><span><strong>Choose filling staples</strong><small>Whole grains, potatoes, rice, maize, or other familiar staples can fit a balanced meal.</small></span></li>
+            <li><span aria-hidden="true">🫘</span><span><strong>Include protein</strong><small>Beans, lentils, eggs, dairy, fish, tofu, nuts, or meat are possible choices.</small></span></li>
+            <li><span aria-hidden="true">💧</span><span><strong>Drink to thirst</strong><small>Keep water available if it suits you; fluid needs differ with health, activity, and climate.</small></span></li>
+          </ul>
+        </section>
+
+        <a class="food-schedule-link" href="schedule.html">Open my schedule <span aria-hidden="true">→</span></a>
+      </main>
+    </div>
+  </body>
+</html>

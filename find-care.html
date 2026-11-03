@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Care | PulseCare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
+  </head>
+  <body class="care-page">
+    <div class="phone-shell schedule-shell">
+      <div class="notch"></div>
+      <header class="detail-header">
+        <a class="back-btn" href="index.html" aria-label="Back to dashboard">←</a>
+        <div>
+          <p class="eyebrow">Care directory</p>
+          <h1>Find care</h1>
+        </div>
+        <a class="care-calendar-link" href="schedule.html" aria-label="Open calendar">🗓️</a>
+      </header>
+
+      <main class="care-content">
+        <section class="care-intro">
+          <span class="care-intro-icon" aria-hidden="true">✚</span>
+          <div>
+            <p class="eyebrow">Your next step</p>
+            <h2>Explore care options</h2>
+            <p>Learn what different specialists generally do, then plan a check-up in your calendar.</p>
+          </div>
+        </section>
+
+        <p class="schedule-notice" role="note">
+          These descriptions are general information, not a diagnosis or a recommendation for a specific doctor. Sample specialties only—PulseCare does not verify providers or book appointments.
+        </p>
+
+        <section class="specialty-section" aria-labelledby="specialtyHeading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Care specialties</p>
+              <h2 id="specialtyHeading">Who can help?</h2>
+            </div>
+          </div>
+          <div class="specialty-grid" id="specialtyGrid"></div>
+        </section>
+
+        <section class="event-form-card care-planner" aria-labelledby="plannerHeading">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">Appointment planner</p>
+              <h2 id="plannerHeading">Plan a medical check-up</h2>
+            </div>
+          </div>
+          <form id="carePlanForm">
+            <label class="form-field">
+              <span>Doctor or specialist</span>
+              <select name="specialty" id="careSpecialty" required></select>
+            </label>
+            <p class="specialty-hint" id="specialtyHint"></p>
+            <label class="form-field">
+              <span>Appointment purpose</span>
+              <select name="purpose">
+                <option value="Routine medical check-up">Routine medical check-up</option>
+                <option value="Follow-up appointment">Follow-up appointment</option>
+                <option value="Preventive health visit">Preventive health visit</option>
+              </select>
+            </label>
+            <div class="form-row">
+              <label class="form-field">
+                <span>Date</span>
+                <input name="date" id="careDate" type="date" required />
+              </label>
+              <label class="form-field">
+                <span>Time</span>
+                <input name="time" type="time" required />
+              </label>
+            </div>
+            <label class="form-field">
+              <span>Clinic or meeting location <small>(optional)</small></span>
+              <input name="location" type="text" maxlength="200" placeholder="Clinic name, address, or video visit" />
+            </label>
+            <button type="submit" class="schedule-submit">Continue to calendar</button>
+            <p class="form-message" id="carePlanMessage" role="status" aria-live="polite"></p>
+          </form>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
