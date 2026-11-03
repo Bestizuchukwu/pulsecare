@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weight History | PulseCare</title>
+    <title>PulseCare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="../app.js"></script>
   </head>
-  <body class="detail-page">
+  <body class="detail-page" data-metric="walk-time" data-view="overview">
     <div class="phone-shell">
       <div class="notch"></div>
 
@@ -18,75 +18,12 @@
         <a class="back-btn" href="../index.html" aria-label="Back">←</a>
         <div>
           <p class="eyebrow">Health check</p>
-          <h1>Weight</h1>
+          <h1 id="metricTitle"></h1>
         </div>
-        <span class="status-tag">Balanced</span>
+        <span class="status-tag" id="metricStatus"></span>
       </header>
 
-      <main class="detail-body">
-        <section class="metric-highlight">
-          <div class="highlight-ring">
-            <div>
-              <strong>69.4</strong>
-              <small>7-day avg</small>
-            </div>
-          </div>
-
-          <div class="mini-readings">
-            <div class="mini-reading">
-              <label>Week</label>
-              <strong>6 days</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Change</label>
-              <strong>-0.5</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Goal</label>
-              <strong>69.0</strong>
-            </div>
-          </div>
-        </section>
-
-        <nav class="action-tabs" aria-label="Metric navigation">
-          <a class="tab" href="weight.html">Overview</a>
-          <a class="tab active" href="weight-history.html">History</a>
-        </nav>
-
-        <section class="history-card">
-          <h3>Recent history</h3>
-          <ul class="history-list">
-            <li class="history-item">
-              <div class="meta">
-                <strong>69.4 kg</strong>
-                <time>Today</time>
-              </div>
-              <span class="trend up">Stable</span>
-            </li>
-            <li class="history-item">
-              <div class="meta">
-                <strong>69.9 kg</strong>
-                <time>Yesterday</time>
-              </div>
-              <span class="trend down">-0.5</span>
-            </li>
-            <li class="history-item">
-              <div class="meta">
-                <strong>70.2 kg</strong>
-                <time>2 days ago</time>
-              </div>
-              <span class="trend down">-0.8</span>
-            </li>
-            <li class="history-item">
-              <div class="meta">
-                <strong>69.7 kg</strong>
-                <time>3 days ago</time>
-              </div>
-              <span class="trend up">+0.5</span>
-            </li>
-          </ul>
-        </section>
-      </main>
+      <main class="detail-body" id="metricRoot"></main>
     </div>
   </body>
 </html>

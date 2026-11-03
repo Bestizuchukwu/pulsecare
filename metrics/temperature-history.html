@@ -3,14 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Temperature | PulseCare</title>
+    <title>PulseCare</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="../styles.css" />
     <script defer src="../app.js"></script>
   </head>
-  <body class="detail-page">
+  <body class="detail-page" data-metric="temperature" data-view="history">
     <div class="phone-shell">
       <div class="notch"></div>
 
@@ -18,71 +18,12 @@
         <a class="back-btn" href="../index.html" aria-label="Back">←</a>
         <div>
           <p class="eyebrow">Health check</p>
-          <h1>Temperature</h1>
+          <h1 id="metricTitle"></h1>
         </div>
-        <span class="status-tag">Healthy</span>
+        <span class="status-tag" id="metricStatus"></span>
       </header>
 
-      <main class="detail-body">
-        <section class="metric-highlight">
-          <div class="highlight-ring">
-            <div>
-              <strong>36.9</strong>
-              <small>°C</small>
-            </div>
-          </div>
-
-          <div class="mini-readings">
-            <div class="mini-reading">
-              <label>Range</label>
-              <strong>36.5-37.0</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Avg</label>
-              <strong>36.8</strong>
-            </div>
-            <div class="mini-reading">
-              <label>Trend</label>
-              <strong>+0.1</strong>
-            </div>
-          </div>
-        </section>
-
-        <nav class="action-tabs" aria-label="Metric navigation">
-          <a class="tab active" href="temperature.html">Overview</a>
-          <a class="tab" href="temperature-history.html">History</a>
-        </nav>
-
-        <section class="metric-summary">
-          <h3>Overview</h3>
-          <div class="summary-grid">
-            <div class="kpi-box">
-              <span class="kpi-label">Last read</span>
-              <strong>6:15 AM</strong>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-label">Status</span>
-              <strong>Normal</strong>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-label">Avg</span>
-              <strong>36.7°C</strong>
-            </div>
-            <div class="kpi-box">
-              <span class="kpi-label">Goal</span>
-              <strong>36.6-37.2</strong>
-            </div>
-          </div>
-        </section>
-
-        <section class="detail-card">
-          <div class="detail-copy">
-            <p>
-              Core body temperature is stable and consistent with your normal daily range. Keep monitoring after exercise or in changing weather conditions to catch inflammation or fever warnings early.
-            </p>
-          </div>
-        </section>
-      </main>
+      <main class="detail-body" id="metricRoot"></main>
     </div>
   </body>
 </html>
