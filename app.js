@@ -1,3 +1,38 @@
+function initProgressiveWebApp() {
+  const appScript = Array.from(document.scripts).find((script) => /(?:^|\/)app\.js(?:\?|$)/.test(script.src));
+  if (!appScript) return;
+
+  const appBase = new URL('./', appScript.src);
+  const manifestLink = document.createElement('link');
+  manifestLink.rel = 'manifest';
+  manifestLink.href = new URL('manifest.webmanifest', appBase).href;
+  document.head.append(manifestLink);
+
+  [
+    ['apple-mobile-web-app-capable', 'yes'],
+    ['apple-mobile-web-app-title', 'PulseCare'],
+    ['apple-mobile-web-app-status-bar-style', 'default'],
+    ['theme-color', '#ff7a1a']
+  ].forEach(([name, content]) => {
+    const meta = document.createElement('meta');
+    meta.name = name;
+    meta.content = content;
+    document.head.append(meta);
+  });
+
+  const appleIcon = document.createElement('link');
+  appleIcon.rel = 'apple-touch-icon';
+  appleIcon.href = new URL('icons/icon-180.png', appBase).href;
+  document.head.append(appleIcon);
+
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register(new URL('service-worker.js', appBase), { scope: appBase.pathname })
+      .catch((error) => console.error('PulseCare could not register offline support:', error));
+  }
+}
+
+initProgressiveWebApp();
+
 const current = location.pathname.split('/').pop();
 if (current && current.includes('-history')) {
   const historyLinks = document.querySelectorAll('.tab');

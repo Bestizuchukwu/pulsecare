@@ -32,6 +32,15 @@ python3 -m http.server 8000
 
 Then open `http://localhost:8000` in your browser.
 
+## Install on a phone
+
+PulseCare is an installable progressive web app for iPhone and Android. Serve it from a secure HTTPS site (or `localhost` for development), then:
+
+- **iPhone:** Open the site in Safari, tap **Share**, then **Add to Home Screen**.
+- **Android:** Open the site in Chrome, tap **Install app** or **Add to Home screen**.
+
+The app shell and pages are cached for offline use after the first successful load. This project provides a web app, not signed App Store or Google Play packages. The GitHub Pages workflow deploys the site when changes are pushed to `main`.
+
 ## Project structure
 
 - `index.html` — dashboard

@@ -1770,20 +1770,29 @@ html[data-theme="ocean"] .form-field select {
   color: var(--text);
 }
 
-@media (max-width: 420px) {
+@media (max-width: 600px) {
   body {
-    padding: 10px;
+    display: block;
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 0;
   }
 
   .phone-shell {
+    width: 100%;
     min-height: 100vh;
-    border-radius: 28px;
-    padding-left: 14px;
-    padding-right: 14px;
+    min-height: 100dvh;
+    border: 0;
+    border-radius: 0;
+    padding: calc(12px + env(safe-area-inset-top)) calc(18px + env(safe-area-inset-right)) calc(22px + env(safe-area-inset-bottom)) calc(18px + env(safe-area-inset-left));
+  }
+
+  .notch {
+    display: none;
   }
 
   .schedule-shell {
-    max-height: calc(100vh - 20px);
+    max-height: none;
   }
 
   .schedule-intro,
